@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>alimaeng – Alima Dyusebayeva, English tutor</title>
+<meta name="description" content="Portfolio of Alima Dyusebayeva, English tutor from Kazakhstan: programs, mentoring, olympiads and awards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #e7ecf2;
+    --ink: #1a2533;
+    --ink-2: #51617a;
+    --accent-text: #17708f;
+    --sh-d: rgba(139, 154, 178, 0.6);
+    --sh-l: rgba(255, 255, 255, 0.95);
+    --pale: #eef3f9;
+    --sky: #2b9cc4;
+    --gold: #f2b51b;
+    --label: #14202c;
+    --btn-a: #1d86ab;
+    --btn-b: #16708f;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b2431;
+      --ink: #e8eef6;
+      --ink-2: #9cabbf;
+      --accent-text: #5cc3e6;
+      --sh-d: rgba(6, 10, 16, 0.7);
+      --sh-l: rgba(52, 68, 90, 0.55);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b2431;
+    --ink: #e8eef6;
+    --ink-2: #9cabbf;
+    --accent-text: #5cc3e6;
+    --sh-d: rgba(6, 10, 16, 0.7);
+    --sh-l: rgba(52, 68, 90, 0.55);
+  }
+
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Onest", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--sky); outline-offset: 4px; border-radius: 12px; }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* Shadows: raised = extruded, inset = pressed in */
+  .raised-sm { box-shadow: 6px 6px 14px var(--sh-d), -6px -6px 14px var(--sh-l); }
+  .raised-lg { box-shadow: 14px 14px 32px var(--sh-d), -14px -14px 32px var(--sh-l); }
+  .inset { box-shadow: inset 6px 6px 14px var(--sh-d), inset -6px -6px 14px var(--sh-l); }
+
+  /* Header */
+  header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 28px 0 8px; flex-wrap: wrap; }
+  .logo {
+    font-family: "Unbounded", "Onest", system-ui, sans-serif;
+    font-weight: 600; font-size: 1.05rem; letter-spacing: -0.01em;
+    text-decoration: none; padding: 12px 24px; border-radius: 999px;
+    box-shadow: 6px 6px 14px var(--sh-d), -6px -6px 14px var(--sh-l);
+  }
+  nav { display: flex; gap: 8px; flex-wrap: wrap; }
+  nav a {
+    text-decoration: none; padding: 10px 18px; border-radius: 999px; color: var(--ink-2); font-weight: 500;
+    transition: box-shadow .2s ease, color .2s ease;
+  }
+  nav a:hover { color: var(--ink); box-shadow: inset 4px 4px 10px var(--sh-d), inset -4px -4px 10px var(--sh-l); }
+
+  .tools { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .lang { display: inline-flex; padding: 5px; border-radius: 999px; box-shadow: inset 4px 4px 9px var(--sh-d), inset -4px -4px 9px var(--sh-l); }
+  .lang button {
+    border: 0; background: transparent; font: inherit; font-weight: 600; font-size: .9rem;
+    padding: 7px 15px; border-radius: 999px; color: var(--ink-2); cursor: pointer;
+    transition: box-shadow .2s ease, color .2s ease, background .2s ease;
+  }
+  .lang button[aria-pressed="true"] { background: var(--bg); color: var(--ink); box-shadow: 3px 3px 7px var(--sh-d), -3px -3px 7px var(--sh-l); }
+  .lang button:not([aria-pressed="true"]):hover { color: var(--ink); }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 1fr; gap: 8px; align-items: center; padding: 40px 0 72px; }
+  @media (min-width: 900px) { .hero { grid-template-columns: 1fr 1.15fr; gap: 24px; padding-top: 56px; } }
+  h1 {
+    font-family: "Unbounded", "Onest", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+    line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 24px;
+    text-shadow: 1px 1px 0 var(--sh-l), 4px 5px 10px var(--sh-d);
+  }
+  .lead { font-size: 1.15rem; color: var(--ink-2); max-width: 32rem; margin: 0 0 36px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 18px; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 15px 28px; border-radius: 999px; font-weight: 600; text-decoration: none;
+    background: var(--bg); color: var(--ink);
+    box-shadow: 8px 8px 18px var(--sh-d), -8px -8px 18px var(--sh-l);
+    transition: box-shadow .18s ease, transform .18s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:active { transform: none; box-shadow: inset 5px 5px 12px var(--sh-d), inset -5px -5px 12px var(--sh-l); }
+  .btn.primary { background: linear-gradient(145deg, var(--btn-a), var(--btn-b)); color: #fff; }
+  .btn.primary:active { box-shadow: inset 5px 5px 12px rgba(0,0,0,.35), inset -4px -4px 10px rgba(255,255,255,.18); }
+
+  /* 3D stair of CEFR levels */
+  .scene-wrap { min-width: 0; }
+  .scene { position: relative; height: 380px; perspective: 1700px; }
+  @media (min-width: 900px) { .scene { height: 460px; } }
+  .world {
+    position: absolute; inset: 0; transform-style: preserve-3d;
+    transform: scale(var(--s, .8)) rotateX(58deg) rotateZ(-38deg);
+  }
+  .block {
+    position: absolute; left: 50%; top: 50%; width: 104px; height: 104px; margin: -52px 0 0 -52px;
+    transform-style: preserve-3d;
+    transform: translate3d(var(--x), 0, 0);
+    animation: rise .95s cubic-bezier(.2, .8, .2, 1) backwards;
+    animation-delay: calc(var(--i) * 110ms);
+  }
+  /* Hover zones never move, so the step can rise without the pointer losing it (no flicker). */
+  .hits { position: absolute; inset: 0; transform-style: preserve-3d; pointer-events: none; }
+  .hit { position: absolute; inset: -5px; border-radius: 30px; pointer-events: auto; }
+  .ground {
+    position: absolute; inset: 0; border-radius: 26px; pointer-events: none;
+    background: var(--sh-d); filter: blur(var(--blur));
+    transform: translate3d(var(--off), var(--off), -1px);
+    transition: transform .35s ease;
+  }
+  .lift {
+    position: absolute; inset: 0; transform-style: preserve-3d; pointer-events: none;
+    will-change: transform;
+    transition: transform .35s cubic-bezier(.22, .8, .3, 1);
+  }
+  .hits:hover ~ .lift { transform: translateZ(var(--lift)); }
+  .hits:hover ~ .ground { transform: translate3d(calc(var(--off) * 1.5), calc(var(--off) * 1.5), -1px); }
+  .layer { position: absolute; inset: 0; border-radius: 26px; }
+  .layer.top {
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Unbounded", "Onest", system-ui, sans-serif; font-weight: 600; font-size: 1.6rem; color: var(--label);
+    box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .45);
+  }
+  @keyframes rise { from { opacity: 0; transform: translate3d(var(--x), 0, -200px); } to { opacity: 1; transform: translate3d(var(--x), 0, 0); } }
+  .scene-caption { margin: 8px 0 0; text-align: center; color: var(--ink-2); font-size: .95rem; }
+
+  /* Sections */
+  section { padding: 56px 0; }
+  h2 {
+    font-family: "Unbounded", "Onest", system-ui, sans-serif; font-weight: 600;
+    font-size: clamp(1.35rem, 2.6vw, 1.75rem); letter-spacing: -0.01em; line-height: 1.2; margin: 0 0 32px;
+    text-shadow: 1px 1px 0 var(--sh-l), 3px 4px 8px var(--sh-d);
+  }
+  .panel { background: var(--bg); border-radius: 28px; padding: 28px; }
+  .panel.feature { border-radius: 44px; padding: 40px; }
+  .role { margin: 0 0 4px; font-size: .92rem; font-weight: 600; color: var(--accent-text); }
+  h3 { font-family: "Unbounded", "Onest", system-ui, sans-serif; font-weight: 500; font-size: 1.12rem; line-height: 1.3; margin: 0 0 12px; }
+  .feature h3 { font-size: 1.5rem; }
+  .desc { margin: 0; color: var(--ink-2); max-width: 36rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: 14px; margin: 28px 0 0; padding: 0; list-style: none; }
+  .chips li { padding: 9px 18px; border-radius: 999px; font-weight: 600; font-size: .92rem; box-shadow: inset 4px 4px 9px var(--sh-d), inset -4px -4px 9px var(--sh-l); }
+
+  .founded { display: grid; grid-template-columns: 1fr; gap: 32px; }
+  @media (min-width: 900px) { .founded { grid-template-columns: 1.3fr 1fr; } }
+  .stack { display: grid; gap: 32px; align-content: start; }
+  .two { display: grid; grid-template-columns: 1fr; gap: 32px; }
+  @media (min-width: 720px) { .two { grid-template-columns: 1fr 1fr; } }
+
+  /* Recognition tray */
+  .tray { list-style: none; margin: 0; padding: 12px 32px; border-radius: 40px; box-shadow: inset 8px 8px 18px var(--sh-d), inset -8px -8px 18px var(--sh-l); }
+  .tray li { padding: 22px 0; display: grid; gap: 2px; border-bottom: 1px solid var(--sh-d); box-shadow: 0 1px 0 var(--sh-l); }
+  .tray li:last-child { border-bottom: 0; box-shadow: none; }
+  .tray strong { font-family: "Unbounded", "Onest", system-ui, sans-serif; font-weight: 500; font-size: 1.05rem; line-height: 1.35; }
+  .tray span { color: var(--ink-2); }
+
+  /* Contact */
+  .contact { border-radius: 44px; padding: 44px 40px; }
+  .contact h2 { margin-bottom: 14px; }
+  .contact p { margin: 0 0 28px; color: var(--ink-2); max-width: 30rem; }
+
+  footer { padding: 40px 0 56px; color: var(--ink-2); font-size: .95rem; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; padding: 0; }
+
+  @media (max-width: 560px) {
+    .panel.feature, .contact { padding: 28px 24px; border-radius: 34px; }
+    .tray { padding: 8px 22px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .block { animation: none; }
+    .lift, .ground, .btn, nav a, .lang button { transition: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="#top" aria-label="alimaeng, home">alimaeng</a>
+      <div class="tools">
+        <nav aria-label="Main">
+          <a href="#work" data-i18n="nav_work">Work</a>
+          <a href="#recognition" data-i18n="nav_rec">Recognition</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
+        </nav>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <div class="hero">
+        <div>
+          <h1 data-i18n="name">Alima<br>Dyusebayeva</h1>
+          <p class="lead" data-i18n="lead">English tutor from Kazakhstan. Beyond lessons, I build programs, mentor students and teach digital skills to people of every age.</p>
+          <div class="actions">
+            <a class="btn primary" href="#contact" data-i18n="cta_book">Book a lesson</a>
+            <a class="btn" href="#work" data-i18n="cta_work">See my work</a>
+          </div>
+        </div>
+        <div class="scene-wrap">
+          <div class="scene" aria-hidden="true"><div class="world" id="world"></div></div>
+          <p class="scene-caption" data-i18n="caption">From A1 to C2, one step at a time.</p>
+          <p class="sr-only" data-i18n="scene_alt">A 3D staircase of six blocks labelled A1, A2, B1, B2, C1 and C2.</p>
+        </div>
+      </div>
+
+      <section id="work" aria-labelledby="h-founded">
+        <h2 id="h-founded" data-i18n="h_founded">Founded and organized</h2>
+        <div class="founded">
+          <article class="panel feature raised-lg">
+            <p class="role" data-i18n="hub_role">Founder and program director</p>
+            <h3>Generation Business Hub</h3>
+            <p class="desc" data-i18n="hub_desc">A free international bootcamp that combines tech prototyping (apps and websites) with study-abroad preparation. I directed the program and, for Cohort 1, managed 7 speakers and 70+ applicants from around the world.</p>
+            <ul class="chips">
+              <li data-i18n="chip_free">Free</li>
+              <li data-i18n="chip_intl">International</li>
+              <li data-i18n="chip_speakers">7 speakers</li>
+              <li data-i18n="chip_applicants">70+ applicants</li>
+            </ul>
+          </article>
+          <div class="stack">
+            <article class="panel raised-lg">
+              <p class="role" data-i18n="soma_role">Organizer</p>
+              <h3>Astana Soma Olympiad</h3>
+              <p class="desc" data-i18n="soma_desc">An olympiad with a prize pool of 11,000,000 KZT.</p>
+            </article>
+            <article class="panel raised-lg">
+              <p class="role" data-i18n="green_role">Project organizer</p>
+              <h3 data-i18n="green_title">Green Steppe eco-campaign</h3>
+              <p class="desc" data-i18n="green_desc">Managed 100+ active participants.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="h-teach">
+        <h2 id="h-teach" data-i18n="h_teach">Teaching and mentoring</h2>
+        <div class="two">
+          <article class="panel raised-lg">
+            <p class="role" data-i18n="alc_role">Course author and instructor</p>
+            <h3>Active Longevity Center</h3>
+            <p class="desc" data-i18n="alc_desc">Designed and delivered digital literacy programs for seniors.</p>
+          </article>
+          <article class="panel raised-lg">
+            <p class="role" data-i18n="xm_role">Certified mentor</p>
+            <h3 data-i18n="xm_title">Xtreme.math International Program</h3>
+            <p class="desc" data-i18n="xm_desc">Certified to mentor students in an international program.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="h-exp">
+        <h2 id="h-exp" data-i18n="h_exp">Experience</h2>
+        <div class="two">
+          <article class="panel raised-lg">
+            <p class="role" data-i18n="alem_role">Official referee</p>
+            <h3>ALEM TECH FEST 2026</h3>
+            <p class="desc" data-i18n="alem_desc">The largest STEM festival in Central Asia. I evaluated matches for hundreds of youth teams.</p>
+          </article>
+          <article class="panel raised-lg">
+            <p class="role" data-i18n="idp_role">Corporate intern</p>
+            <h3>IELTS IDP</h3>
+            <p class="desc" data-i18n="idp_desc">Internship in 2026.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="recognition" aria-labelledby="h-rec">
+        <h2 id="h-rec" data-i18n="h_rec">Recognition</h2>
+        <ul class="tray">
+          <li><strong data-i18n="r1_t">Altyn Belgi and Red Attestat</strong><span data-i18n="r1_d">School-graduation honors</span></li>
+          <li><strong data-i18n="r2_t">Perfect score, 100/100</strong><span data-i18n="r2_d">Winner, National Financial Security Competition</span></li>
+          <li><strong data-i18n="r3_t">Letter of appreciation</strong><span data-i18n="r3_d">Minister of Science and Higher Education of the Republic of Kazakhstan</span></li>
+          <li><strong data-i18n="r4_t">Letter of appreciation</strong><span data-i18n="r4_d">Mayor of Astana</span></li>
+          <li><strong data-i18n="r5_t">Outstanding national volunteer</strong><span data-i18n="r5_d">More than 150 volunteer hours</span></li>
+        </ul>
+      </section>
+
+      <section id="contact" aria-labelledby="h-contact">
+        <div class="panel contact raised-lg">
+          <h2 id="h-contact" data-i18n="h_contact">Book a lesson</h2>
+          <p data-i18n="contact_p">Write to me to talk about English lessons and find a time that works.</p>
+          <div class="actions">
+            <a class="btn primary" href="https://www.instagram.com/corticosteroida" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn" href="mailto:corticosteroida@gmail.com" data-i18n="email">Email</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span>alimaeng</span>
+      <span data-i18n="footer">Alima Dyusebayeva, English tutor</span>
+    </div>
+  </footer>
+
+<script>
+  (function () {
+    /* ---------- 3D stair ---------- */
+    var world = document.getElementById('world');
+    var levels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+    var LIFT = [10, 16, 22, 28, 34, 44];           /* px each step rises on hover: A1 lowest, C2 highest */
+    var size = 104, gap = 12, step = size + gap;
+    var PALE = [238, 243, 249], SKY = [43, 156, 196], GOLD = [242, 181, 27], SHADE = [12, 21, 32];
+
+    function mix(a, b, t) {
+      return [0, 1, 2].map(function (n) { return Math.round(a[n] + (b[n] - a[n]) * t); });
+    }
+    function rgb(c) { return 'rgb(' + c[0] + ',' + c[1] + ',' + c[2] + ')'; }
+    function el(cls) { var d = document.createElement('div'); d.className = cls; return d; }
+
+    levels.forEach(function (label, i) {
+      var h = 14 + i * 14;
+      var topColor = i < 5 ? mix(PALE, SKY, i * 0.22) : GOLD;
+
+      var block = el('block');
+      block.style.setProperty('--i', i);
+      block.style.setProperty('--x', ((i - 2.5) * step) + 'px');
+      block.style.setProperty('--lift', LIFT[i] + 'px');
+      block.style.setProperty('--off', Math.round(h * 0.55) + 'px');
+      block.style.setProperty('--blur', Math.round(h * 0.3 + 6) + 'px');
+
+      var hits = el('hits');
+      [0, h / 2, h + 2].forEach(function (z) {
+        var hit = el('hit');
+        hit.style.transform = 'translateZ(' + z + 'px)';
+        hits.appendChild(hit);
+      });
+
+      var lift = el('lift');
+      var frag = document.createDocumentFragment();
+      for (var k = 0; k <= h; k++) {
+        var l = el('layer');
+        l.style.transform = 'translateZ(' + k + 'px)';
+        if (k === h) {
+          l.classList.add('top');
+          l.style.background = rgb(topColor);
+          l.textContent = label;
+        } else {
+          l.style.background = rgb(mix(topColor, SHADE, (38 - (k / h) * 26) / 100));
+        }
+        frag.appendChild(l);
+      }
+      lift.appendChild(frag);
+
+      block.appendChild(hits);
+      block.appendChild(el('ground'));
+      block.appendChild(lift);
+      world.appendChild(block);
+    });
+
+    var scene = world.parentElement;
+    function fit() {
+      var s = Math.min(1.1, scene.clientWidth / 660);
+      world.style.setProperty('--s', s.toFixed(3));
+    }
+    fit();
+    window.addEventListener('resize', fit);
+
+    /* ---------- EN / RU ---------- */
+    var RU = {
+      nav_work: 'Работы', nav_rec: 'Награды', nav_contact: 'Контакты',
+      name: 'Алима<br>Дюсебаева',
+      lead: 'Репетитор английского языка из Казахстана. Помимо уроков, я создаю программы, наставляю учеников и обучаю цифровым навыкам людей любого возраста.',
+      cta_book: 'Записаться на урок', cta_work: 'Мои работы',
+      caption: 'От A1 до C2, шаг за шагом.',
+      scene_alt: 'Трёхмерная лестница из шести блоков с отметками A1, A2, B1, B2, C1 и C2.',
+      h_founded: 'Основано и организовано',
+      hub_role: 'Основатель и директор программы',
+      hub_desc: 'Бесплатный международный буткемп, объединяющий технологическое прототипирование (приложения и сайты) с подготовкой к обучению за рубежом. Я руководила программой и в первом потоке координировала 7 спикеров и более 70 заявителей со всего мира.',
+      chip_free: 'Бесплатно', chip_intl: 'Международный', chip_speakers: '7 спикеров', chip_applicants: '70+ заявителей',
+      soma_role: 'Организатор', soma_desc: 'Олимпиада с призовым фондом 11 000 000 тенге.',
+      green_role: 'Организатор проекта', green_title: 'Экокампания Green Steppe', green_desc: 'Руководила работой 100+ активных участников.',
+      h_teach: 'Преподавание и менторство',
+      alc_role: 'Автор курса и преподаватель', alc_desc: 'Разработала и провела программы цифровой грамотности для пожилых людей.',
+      xm_role: 'Сертифицированный ментор', xm_title: 'Международная программа Xtreme.math', xm_desc: 'Сертифицированный наставник учеников в международной программе.',
+      h_exp: 'Опыт',
+      alem_role: 'Официальный судья', alem_desc: 'Крупнейший STEM-фестиваль Центральной Азии. Оценивала матчи сотен молодёжных команд.',
+      idp_role: 'Корпоративный стажёр', idp_desc: 'Стажировка в 2026 году.',
+      h_rec: 'Награды',
+      r1_t: 'Алтын белгі и Красный аттестат', r1_d: 'Награды за окончание школы',
+      r2_t: 'Высший балл, 100/100', r2_d: 'Победитель Национального конкурса по финансовой безопасности',
+      r3_t: 'Благодарственное письмо', r3_d: 'Министр науки и высшего образования Республики Казахстан',
+      r4_t: 'Благодарственное письмо', r4_d: 'Аким города Астаны',
+      r5_t: 'Выдающийся национальный волонтёр', r5_d: 'Более 150 часов волонтёрской работы',
+      h_contact: 'Записаться на урок',
+      contact_p: 'Напишите мне, чтобы обсудить уроки английского и выбрать удобное время.',
+      email: 'Почта',
+      footer: 'Алима Дюсебаева, репетитор английского языка'
+    };
+    var nodes = document.querySelectorAll('[data-i18n]');
+    var EN = {};
+    nodes.forEach(function (n) { EN[n.getAttribute('data-i18n')] = n.innerHTML; });
+    var TITLE = {
+      en: document.title,
+      ru: 'alimaeng – Алима Дюсебаева, репетитор английского языка'
+    };
+    var buttons = document.querySelectorAll('.lang button');
+
+    function setLang(lang) {
+      var dict = lang === 'ru' ? RU : EN;
+      nodes.forEach(function (n) {
+        var v = dict[n.getAttribute('data-i18n')];
+        if (v !== undefined) n.innerHTML = v;
+      });
+      document.documentElement.lang = lang;
+      document.title = TITLE[lang];
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-lang') === lang ? 'true' : 'false'); });
+      try { localStorage.setItem('alimaeng-lang', lang); } catch (e) {}
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
+    });
+
+    var saved = null;
+    try { saved = localStorage.getItem('alimaeng-lang'); } catch (e) {}
+    if (saved === 'ru' || saved === 'en') {
+      if (saved === 'ru') setLang('ru');
+    } else if ((navigator.language || '').toLowerCase().indexOf('ru') === 0) {
+      setLang('ru');
+    }
+  })();
+</script>
+</body>
+</html>
